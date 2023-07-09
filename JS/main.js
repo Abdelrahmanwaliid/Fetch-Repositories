@@ -7,6 +7,13 @@ getButton.onclick = () => {
   getRepos();
 };
 
+// To Press Enter Key
+theInput.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    getButton.click();
+  }
+});
+
 function getRepos() {
   if (theInput.value === "") {
     reposData.innerHTML = "<span>Please Write Github Username.</span>";
